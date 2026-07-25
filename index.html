@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Branch of Righteousness</title>
+<meta name="description" content="A ministry rooted in Scripture, helping believers build a daily rhythm of prayer and press on toward deeper union with God through Christian mysticism and contemplative practice.">
+<meta property="og:title" content="Branch of Righteousness">
+<meta property="og:description" content="A ministry rooted in Scripture, helping believers build a daily rhythm of prayer and press on toward deeper union with God.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://branchofrighteousness.org">
+<meta property="og:site_name" content="Branch of Righteousness">
+<meta property="og:image" content="https://branchofrighteousness.org/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Branch of Righteousness">
+<meta name="twitter:description" content="A ministry rooted in Scripture, helping believers build a daily rhythm of prayer and press on toward deeper union with God.">
+<meta name="twitter:image" content="https://branchofrighteousness.org/og-image.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --stone:#F2F1EC;
+    --stone-deep:#E8E5DA;
+    --ink:#1C2331;
+    --ink-soft:#3C4456;
+    --gold:#A9812E;
+    --gold-soft:#C9A75C;
+    --green:#2F4A3C;
+    --line:#D9D4C4;
+    --white:#FFFFFF;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--stone);
+    color:var(--ink);
+    font-family:'Inter', sans-serif;
+    font-size:17px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.display{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    letter-spacing:-0.01em;
+    color:var(--ink);
+  }
+  .mono{
+    font-family:'IBM Plex Mono', monospace;
+    letter-spacing:0.04em;
+    text-transform:uppercase;
+    font-size:0.72rem;
+  }
+  a{color:inherit;}
+  img{max-width:100%; display:block;}
+  .wrap{max-width:960px; margin:0 auto; padding:0 28px;}
+  .wrap-narrow{max-width:740px; margin:0 auto; padding:0 28px;}
+
+  /* Focus visibility */
+  a:focus-visible, button:focus-visible{
+    outline:2px solid var(--gold);
+    outline-offset:3px;
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation:none !important; transition:none !important;}
+  }
+
+  /* ===== NAV ===== */
+  nav{
+    position:sticky; top:0; z-index:50;
+    background:rgba(242,241,236,0.92);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  nav .wrap{
+    display:flex; align-items:center; justify-content:space-between;
+    height:64px;
+  }
+  .brand{
+    font-family:'Fraunces', serif; font-weight:600; font-size:1.05rem;
+    display:flex; align-items:center; gap:10px;
+  }
+  .brand .mark{
+    width:26px; height:26px; border-radius:50%;
+    border:1.5px solid var(--gold);
+    display:flex; align-items:center; justify-content:center;
+    font-size:13px; color:var(--gold);
+  }
+  .navlinks{display:flex; gap:28px; font-size:0.88rem;}
+  .navlinks a{text-decoration:none; color:var(--ink-soft); transition:color 0.2s;}
+  .navlinks a:hover{color:var(--gold);}
+  @media (max-width:640px){ .navlinks{display:none;} }
+
+  /* ===== HERO ===== */
+  .hero{
+    padding:100px 0 90px;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero .wrap{position:relative; z-index:2;}
+  .eyebrow{
+    color:var(--gold); margin-bottom:22px; display:flex; align-items:center; gap:10px;
+  }
+  .eyebrow::before{
+    content:''; width:22px; height:1px; background:var(--gold);
+  }
+  .hero h1{
+    font-size:clamp(2.4rem, 5.5vw, 4.1rem);
+    line-height:1.05;
+    max-width:11ch;
+    margin-bottom:28px;
+  }
+  .hero .sub{
+    font-size:1.15rem;
+    color:var(--ink-soft);
+    max-width:46ch;
+    margin-bottom:40px;
+  }
+  .hero .ctas{display:flex; gap:16px; flex-wrap:wrap;}
+
+  .btn{
+    display:inline-flex; align-items:center; gap:8px;
+    padding:14px 26px;
+    font-family:'Inter', sans-serif; font-weight:600; font-size:0.92rem;
+    border-radius:2px;
+    text-decoration:none;
+    border:1px solid transparent;
+    cursor:pointer;
+    transition:transform 0.15s ease, background 0.2s ease, border-color 0.2s ease;
+  }
+  .btn:hover{ transform:translateY(-1px); }
+  .btn-primary{ background:var(--ink); color:var(--stone); }
+  .btn-primary:hover{ background:var(--green); }
+  .btn-ghost{ border-color:var(--ink); color:var(--ink); }
+  .btn-ghost:hover{ border-color:var(--gold); color:var(--gold); }
+
+  /* Seal graphic in hero */
+  .seal{
+    position:absolute;
+    right:-60px; top:40px;
+    width:340px; height:340px;
+    border-radius:50%;
+    border:1px solid var(--line);
+    opacity:0.6;
+    z-index:1;
+  }
+  .seal::before{
+    content:'';
+    position:absolute; inset:26px;
+    border-radius:50%;
+    border:1px solid var(--gold-soft);
+  }
+  @media (max-width:900px){ .seal{ display:none; } }
+
+  /* ===== SECTION shared ===== */
+  section{ padding:86px 0; border-top:1px solid var(--line); }
+  .section-head{ margin-bottom:52px; max-width:60ch; }
+  .section-head .mono{ color:var(--gold); margin-bottom:14px; display:block; }
+  .section-head h2{ font-size:clamp(1.7rem, 3.4vw, 2.3rem); margin-bottom:16px; }
+  .section-head p{ color:var(--ink-soft); font-size:1.02rem; }
+
+  /* ===== MANDATE quote ===== */
+  .mandate{
+    background:var(--ink);
+    color:var(--stone);
+    border-top:none;
+  }
+  .mandate blockquote{
+    font-family:'Fraunces', serif;
+    font-weight:400;
+    font-style:italic;
+    font-size:clamp(1.3rem, 2.6vw, 1.75rem);
+    line-height:1.5;
+    max-width:34ch;
+  }
+  .mandate .attrib{
+    margin-top:28px; color:var(--gold-soft);
+  }
+
+  /* ===== FOUNDATIONS (linear build, since it's a real progression) ===== */
+  .stones{
+    display:flex; flex-direction:column-reverse;
+    gap:2px;
+    max-width:640px;
+  }
+  .stone-row{
+    display:grid;
+    grid-template-columns:56px 1fr;
+    align-items:center;
+    gap:20px;
+    background:var(--white);
+    border:1px solid var(--line);
+    padding:18px 22px;
+  }
+  .stone-num{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:1.1rem;
+    color:var(--gold);
+    text-align:center;
+  }
+  .stone-row h3{
+    font-size:1.02rem; font-weight:600; margin-bottom:3px;
+  }
+  .stone-row p{ color:var(--ink-soft); font-size:0.92rem; }
+  .stones-note{
+    margin-top:22px; font-size:0.9rem; color:var(--ink-soft); max-width:52ch;
+    padding-left:2px;
+  }
+  .stones-note strong{ color:var(--ink); }
+
+  /* ===== ABOUT ===== */
+  .about-body{ max-width:64ch; }
+  .about-body p{ color:var(--ink-soft); font-size:1.02rem; margin-bottom:18px; }
+  .about-body p:first-child{ color:var(--ink); font-size:1.08rem; }
+
+  /* book blurb split */
+  .book-split{
+    display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:start;
+  }
+  @media (max-width:760px){ .book-split{ grid-template-columns:1fr; } }
+  .book-cover{
+    aspect-ratio:3/4.2;
+    background:linear-gradient(160deg, var(--ink) 0%, #262f42 60%, var(--green) 100%);
+    border-radius:2px;
+    display:flex; flex-direction:column; justify-content:center; align-items:center;
+    text-align:center; padding:40px;
+    color:var(--stone);
+  }
+  .book-cover .mono{ color:var(--gold-soft); margin-bottom:18px; }
+  .book-cover h3{ font-size:1.5rem; color:var(--stone); line-height:1.25; margin-bottom:14px; }
+  .book-cover .author{ color:var(--gold-soft); font-size:0.85rem; letter-spacing:0.05em; }
+  .book-copy p{ margin-bottom:18px; color:var(--ink-soft); }
+  .book-copy p:first-child{ color:var(--ink); font-size:1.05rem; }
+  .book-ctas{ display:flex; gap:14px; flex-wrap:wrap; margin-top:8px; }
+
+  /* ===== RHYTHM cards ===== */
+  .rhythm-grid{
+    display:grid; grid-template-columns:1fr 1fr; gap:2px;
+    background:var(--line);
+    border:1px solid var(--line);
+  }
+  @media (max-width:640px){ .rhythm-grid{ grid-template-columns:1fr; } }
+  .rhythm-card{ background:var(--white); padding:32px; }
+  .rhythm-card .mono{ color:var(--gold); margin-bottom:14px; display:block; }
+  .rhythm-card h3{ font-size:1.3rem; margin-bottom:10px; }
+  .rhythm-card p{ color:var(--ink-soft); font-size:0.95rem; }
+
+  /* ===== CYCLE wheel (circular, since it repeats) ===== */
+  .cycle-wrap{
+    display:grid; grid-template-columns:280px 1fr; gap:56px; align-items:center;
+  }
+  @media (max-width:760px){ .cycle-wrap{ grid-template-columns:1fr; } }
+  .wheel{
+    position:relative; width:260px; height:260px; margin:0 auto;
+  }
+  .wheel-ring{
+    position:absolute; inset:0; border-radius:50%;
+    border:1px dashed var(--line);
+  }
+  .wheel-center{
+    position:absolute; inset:76px; border-radius:50%;
+    background:var(--ink); color:var(--stone);
+    display:flex; align-items:center; justify-content:center;
+    text-align:center; font-family:'Fraunces', serif; font-size:0.95rem; font-weight:600;
+    line-height:1.2; padding:10px;
+  }
+  .wheel-node{
+    position:absolute; width:64px; height:64px; margin:-32px;
+    border-radius:50%; background:var(--white); border:1px solid var(--line);
+    display:flex; align-items:center; justify-content:center;
+    text-align:center; font-size:0.62rem; font-weight:600; color:var(--ink-soft);
+    padding:6px; line-height:1.15;
+  }
+  .cycle-list{ display:flex; flex-direction:column; gap:0; }
+  .cycle-item{
+    display:flex; gap:16px; padding:14px 0;
+    border-bottom:1px solid var(--line);
+  }
+  .cycle-item:first-child{ border-top:1px solid var(--line); }
+  .cycle-item .mono{ color:var(--gold); min-width:26px; }
+  .cycle-item span.name{ font-weight:600; }
+  .cycle-item span.desc{ color:var(--ink-soft); font-size:0.9rem; display:block; }
+
+  /* ===== MONTHLY TEACHING ===== */
+  .teaching-featured{
+    background:var(--white); border:1px solid var(--line);
+    padding:44px; margin-bottom:48px;
+    display:grid; grid-template-columns:180px 1fr; gap:40px; align-items:start;
+  }
+  @media (max-width:700px){ .teaching-featured{ grid-template-columns:1fr; padding:30px 26px; } }
+  .teaching-when{
+    display:flex; flex-direction:column; gap:6px;
+  }
+  .teaching-when .month{
+    font-family:'Fraunces', serif; font-weight:600; font-size:1.4rem; line-height:1.1;
+  }
+  .teaching-when .mono{ color:var(--gold); }
+  .teaching-body h3{ font-size:1.5rem; margin-bottom:14px; }
+  .teaching-body p{ color:var(--ink-soft); margin-bottom:18px; }
+  .teaching-body p:last-of-type{ margin-bottom:26px; }
+
+  .teaching-archive-head{
+    font-size:0.82rem; font-weight:600; color:var(--ink-soft);
+    text-transform:uppercase; letter-spacing:0.04em;
+    margin-bottom:2px; padding-bottom:14px;
+  }
+  .teaching-archive{ display:flex; flex-direction:column; }
+  .teaching-item{
+    display:flex; gap:20px; align-items:baseline;
+    padding:18px 0; border-bottom:1px solid var(--line);
+  }
+  .teaching-item:first-child{ border-top:1px solid var(--line); }
+  .teaching-item .mono{ color:var(--gold); min-width:100px; }
+  .teaching-item .name{ font-weight:600; flex:1; }
+  .teaching-item .theme{ color:var(--ink-soft); font-size:0.88rem; }
+  @media (max-width:640px){
+    .teaching-item{ flex-wrap:wrap; }
+    .teaching-item .mono{ min-width:auto; }
+  }
+
+  /* ===== GROUPS ===== */
+  .groups-grid{
+    display:grid; grid-template-columns:repeat(3, 1fr); gap:2px;
+    background:var(--line); border:1px solid var(--line);
+  }
+  @media (max-width:860px){ .groups-grid{ grid-template-columns:1fr; } }
+  .group-card{
+    background:var(--white); padding:34px 30px;
+    display:flex; flex-direction:column; height:100%;
+  }
+  .group-icon{
+    width:44px; height:44px; border-radius:50%;
+    display:flex; align-items:center; justify-content:center;
+    margin-bottom:22px; font-size:1.1rem;
+    border:1px solid var(--line);
+  }
+  .group-card h3{ font-size:1.15rem; margin-bottom:8px; }
+  .group-card .tag{
+    color:var(--gold); margin-bottom:14px; display:block;
+  }
+  .group-card p{ color:var(--ink-soft); font-size:0.92rem; flex-grow:1; margin-bottom:22px; }
+  .group-card .btn{ align-self:flex-start; }
+
+  /* ===== JOIN FORM ===== */
+  .join-panel{
+    background:var(--white); border:1px solid var(--line);
+    padding:44px;
+  }
+  @media (max-width:640px){ .join-panel{ padding:30px 24px; } }
+  .join-grid{ display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-bottom:22px; }
+  @media (max-width:640px){ .join-grid{ grid-template-columns:1fr; } }
+  .field{ display:flex; flex-direction:column; gap:8px; }
+  .field label{ font-size:0.82rem; font-weight:600; color:var(--ink-soft); }
+  .field input, .field select, .field textarea{
+    font-family:'Inter', sans-serif; font-size:0.95rem;
+    padding:12px 14px; border:1px solid var(--line); border-radius:2px;
+    background:var(--stone); color:var(--ink);
+  }
+  .field input:focus, .field select:focus, .field textarea:focus{
+    outline:none; border-color:var(--gold);
+  }
+  .field-full{ grid-column:1/-1; }
+  .join-note{ font-size:0.85rem; color:var(--ink-soft); margin-top:16px; }
+
+  /* ===== FOOTER ===== */
+  footer{
+    background:var(--ink); color:var(--stone);
+    padding:56px 0 36px;
+  }
+  footer .wrap{
+    display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:24px;
+  }
+  footer .brand{ color:var(--stone); }
+  footer .brand .mark{ border-color:var(--gold-soft); color:var(--gold-soft); }
+  footer .foot-verse{
+    font-family:'Fraunces', serif; font-style:italic; color:#9AA3B5; max-width:36ch; font-size:0.95rem;
+  }
+  footer .copyline{
+    width:100%; margin-top:36px; padding-top:24px; border-top:1px solid #333c50;
+    font-size:0.78rem; color:#7B8398;
+    display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px;
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="brand"><span class="mark">✦</span> Branch of Righteousness</div>
+    <div class="navlinks">
+      <a href="#mandate">Mandate</a>
+      <a href="#about">About</a>
+      <a href="#book">The Journey</a>
+      <a href="#rhythm">Rhythm</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#groups">Groups</a>
+      <a href="#join">Join</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="seal" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="eyebrow mono">A ministry rooted in Scripture</div>
+    <h1>Go on to maturity.</h1>
+    <p class="sub">Branch of Righteousness exists to help ordinary believers lay a firm foundation, build a daily rhythm of prayer, and press on toward deeper, stable union with God.</p>
+    <div class="ctas">
+      <a href="#join" class="btn btn-primary">Request to join a group</a>
+      <a href="#book" class="btn btn-ghost">Read our framework</a>
+    </div>
+  </div>
+</header>
+
+<section id="verse-of-day" style="padding:40px 0; border-top:1px solid var(--line); background:var(--white);">
+  <div class="wrap">
+    <div style="border-left:2px solid var(--green); padding-left:20px; max-width:60ch;">
+      <span class="mono" style="color:var(--gold); display:block; margin-bottom:10px;">Verse for today</span>
+      <p id="votd-text" style="font-family:'Fraunces', serif; font-style:italic; font-size:1.3rem; line-height:1.5; margin-bottom:10px; color:var(--ink);"></p>
+      <p id="votd-ref" style="font-size:0.9rem; color:var(--green); font-family:'Inter', sans-serif;"></p>
+    </div>
+  </div>
+</section>
+
+<section id="mandate" class="mandate">
+  <div class="wrap">
+    <span class="mono" style="color:var(--gold-soft);">Our mandate</span>
+    <blockquote style="margin-top:18px;">
+      "Therefore, leaving the discussion of the elementary principles of Christ, let us go on to perfection."
+    </blockquote>
+    <div class="attrib mono">Hebrews 6:1</div>
+    <p style="margin-top:34px; max-width:56ch; color:#C7CBD6; font-size:1.02rem;">
+      We help every member lay a firm biblical foundation, build a daily and weekly rhythm of prayer and practice, understand and endure seasons of spiritual dryness, and press on toward deeper, stable union with God — not as an escape from ordinary life, but as the deepening of it.
+    </p>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="mono">Who we are</span>
+      <h2>A word from the founder</h2>
+    </div>
+    <div class="about-body">
+      <p>I'm Lucky Mahlasela, founder of Branch of Righteousness. For more than thirty years I've walked a contemplative Christian journey — one that grew into my own pursuit of a deeper walk with Christ, and now into this ministry.</p>
+      <p><em>Beyond the Veil: Entering the Mysteries of God</em> is the written form of that pursuit, and this community exists to walk it out together, one honest week at a time.</p>
+    </div>
+  </div>
+</section>
+
+<section id="foundations">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="mono">Hebrews 6 · The starting line</span>
+      <h2>Six foundations, laid in order</h2>
+      <p>Everything we build rests on these. Not beginner topics to move past — the ground floor everything else stands on.</p>
+    </div>
+
+    <div class="stones">
+      <div class="stone-row"><div class="stone-num">01</div><div><h3>Repentance from dead works</h3><p>Turning the soul away from what is lifeless, toward the living God.</p></div></div>
+      <div class="stone-row"><div class="stone-num">02</div><div><h3>Faith toward God</h3><p>Teaching the heart to lean upon Him who cannot fail.</p></div></div>
+      <div class="stone-row"><div class="stone-num">03</div><div><h3>The doctrine of baptisms</h3><p>Cleansing, identification, and sacred belonging.</p></div></div>
+      <div class="stone-row"><div class="stone-num">04</div><div><h3>Laying on of hands</h3><p>Blessing, commissioning, and spiritual transmission.</p></div></div>
+      <div class="stone-row"><div class="stone-num">05</div><div><h3>Resurrection of the dead</h3><p>Lifting the eyes beyond the grave.</p></div></div>
+      <div class="stone-row"><div class="stone-num">06</div><div><h3>Eternal judgment</h3><p>All things finally weighed in the light of God's righteousness.</p></div></div>
+    </div>
+    <p class="stones-note"><strong>Foundations come before fire; obedience before rapture; surrender before union.</strong> You can't skip to the deep things — these six principles are the deep things, laid straight.</p>
+  </div>
+</section>
+
+<section id="book">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="mono">Our framework</span>
+      <h2>Walking through Beyond the Veil</h2>
+    </div>
+    <div class="book-split">
+      <div class="book-cover">
+        <span class="mono">A journey into Christian mysticism</span>
+        <h3>Beyond the Veil<br>Entering the Mysteries of God</h3>
+        <span class="author">LUCKY MAHLASELA</span>
+      </div>
+      <div class="book-copy">
+        <p>Our teaching and discussion follow the arc of this book — from the six foundations, through the witness of the Desert Fathers and medieval mystics, into daily practice, the dark night of purification, and mystical union with God.</p>
+        <p>It is not a detour from Christ, but a fuller entrance into the reality every believer has already received in Him. Ordinary believers, in ordinary places, pursuing an extraordinary, ordinary walk with Christ.</p>
+        <p>We test every experience by Scripture, and hold it in love, humility, and obedience — drawing also on the witness of the wider Church across the centuries.</p>
+        <div class="book-ctas">
+          <a href="https://www.amazon.com/dp/B0GX36BHX6" class="btn btn-primary" target="_blank" rel="noopener">Get it on Amazon</a>
+          <a href="#contact" class="btn btn-ghost">Enquire about local print copies (South Africa)</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="rhythm">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="mono">How we meet</span>
+      <h2>A fixed weekly rhythm</h2>
+      <p>Two gatherings a week, each with its own purpose.</p>
+    </div>
+    <div class="rhythm-grid">
+      <div class="rhythm-card">
+        <span class="mono">Wednesdays</span>
+        <h3>Teaching</h3>
+        <p>A short reflection on that week's theme, drawn from Scripture and Beyond the Veil, with a question or two to sit with until Sunday.</p>
+      </div>
+      <div class="rhythm-card">
+        <span class="mono">Sundays</span>
+        <h3>Testimony</h3>
+        <p>Members share how the theme showed up in their week — a struggle, a small win, an honest moment. No polished stories required.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="teaching">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="mono">Monthly teaching</span>
+      <h2>One theme, gone deeper, every month</h2>
+      <p>Each month we sit with one theme from the cycle a little longer — a fuller written teaching to read slowly, alongside the weekly reflections.</p>
+    </div>
+
+    <div class="teaching-featured">
+      <div class="teaching-when">
+        <span class="mono">This month</span>
+        <span class="month">August 2026</span>
+      </div>
+      <div class="teaching-body">
+        <h3>Repentance from Dead Works</h3>
+        <p>Before anything else is built, the ground must be cleared. Hebrews places repentance first — not because it is elementary in the sense of small, but because everything else in the Christian life stands or falls on it.</p>
+        <p>The Desert Fathers understood "dead works" as more than obvious sin. Abba Poemen taught his disciples to examine even their good deeds — was this done for God, or to be seen? Repentance, in their hands, became less a single event at conversion and more a daily return, a continual turning of the face back toward God whenever it had drifted, even slightly, toward self.</p>
+        <p>This month we sit with that posture: not repentance as crisis management, but as the quiet, repeated work of a heart staying honest before God.</p>
+        <a href="#join" class="btn btn-ghost">Read the full teaching</a>
+      </div>
+    </div>
+
+    <div class="teaching-archive-head">Coming next</div>
+    <div class="teaching-archive">
+      <div class="teaching-item"><span class="mono">SEPT 2026</span><span class="name">Faith Toward God</span><span class="theme">Foundations</span></div>
+      <div class="teaching-item"><span class="mono">OCT 2026</span><span class="name">The Doctrine of Baptisms</span><span class="theme">Foundations</span></div>
+      <div class="teaching-item"><span class="mono">NOV 2026</span><span class="name">Laying On of Hands</span><span class="theme">Foundations</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="cycle">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="mono">The 8-theme cycle</span>
+      <h2>A journey that repeats, each time deeper</h2>
+      <p>We move through eight themes on a continuous cycle — each pass takes a fresh angle: plain teaching, then practice, then testimony, then a mixed format.</p>
+    </div>
+    <div class="cycle-wrap">
+      <div class="wheel" aria-hidden="true">
+        <div class="wheel-ring"></div>
+        <div class="wheel-center">Union<br>with God</div>
+        <div class="wheel-node" style="top:6%; left:50%;">Foundations</div>
+        <div class="wheel-node" style="top:22.5%; left:84.4%;">Desert Wisdom</div>
+        <div class="wheel-node" style="top:59.8%; left:92.9%;">Love</div>
+        <div class="wheel-node" style="top:89.6%; left:69.1%;">Interior Castle</div>
+        <div class="wheel-node" style="top:89.6%; left:30.9%;">Dark Night</div>
+        <div class="wheel-node" style="top:59.8%; left:7.1%;">Contemplative Prayer</div>
+        <div class="wheel-node" style="top:22.5%; left:15.6%;">Daily Rhythms</div>
+      </div>
+      <div class="cycle-list">
+        <div class="cycle-item"><span class="mono">01</span><div><span class="name">Foundations</span><span class="desc">The six elementary principles of Hebrews 6.</span></div></div>
+        <div class="cycle-item"><span class="mono">02</span><div><span class="name">Desert Wisdom</span><span class="desc">Silence, repentance, and hidden acts of love.</span></div></div>
+        <div class="cycle-item"><span class="mono">03</span><div><span class="name">Love</span><span class="desc">Bernard, Hildegard, Francis — love as the highest way.</span></div></div>
+        <div class="cycle-item"><span class="mono">04</span><div><span class="name">Interior Castle</span><span class="desc">Teresa of Ávila and the stages of prayer.</span></div></div>
+        <div class="cycle-item"><span class="mono">05</span><div><span class="name">Dark Night</span><span class="desc">Dryness, testing, and purification — John of the Cross.</span></div></div>
+        <div class="cycle-item"><span class="mono">06</span><div><span class="name">Contemplative Prayer</span><span class="desc">Resting in God's presence, apophatic humility.</span></div></div>
+        <div class="cycle-item"><span class="mono">07</span><div><span class="name">Daily Rhythms</span><span class="desc">Morning, midday, evening — a rule of life.</span></div></div>
+        <div class="cycle-item"><span class="mono">08</span><div><span class="name">Mystical Union</span><span class="desc">The goal: transformed will, purity of heart, fruitfulness.</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="groups">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="mono">Our WhatsApp groups</span>
+      <h2>Three spaces, three purposes</h2>
+      <p>Each group carries a distinct role, so you always know what you've walked into.</p>
+    </div>
+    <div class="groups-grid">
+      <div class="group-card">
+        <div class="group-icon">🙏</div>
+        <span class="tag mono">Discussion</span>
+        <h3>SHALOM!</h3>
+        <p>Weekly teaching and testimony, walking through Beyond the Veil together — Wednesdays and Sundays.</p>
+        <a href="#join" class="btn btn-ghost">Request to join</a>
+      </div>
+      <div class="group-card">
+        <div class="group-icon">📢</div>
+        <span class="tag mono">One-way</span>
+        <h3>Announcements</h3>
+        <p>Official updates — service times, events, and housekeeping matters from the Branch of Righteousness.</p>
+        <a href="#join" class="btn btn-ghost">Request to join</a>
+      </div>
+      <div class="group-card">
+        <div class="group-icon">📜</div>
+        <span class="tag mono">Daily</span>
+        <h3>What Are the Heavens Saying Today?</h3>
+        <p>A daily word — fresh, not stored up. Give us this day our daily bread.</p>
+        <a href="#join" class="btn btn-ghost">Request to join</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="join">
+  <div class="wrap-narrow">
+    <div class="section-head">
+      <span class="mono">Get in touch</span>
+      <h2>Request to join a group</h2>
+      <p>Tell us a little about yourself, and we'll add you to the right space.</p>
+    </div>
+
+    <form class="join-panel" id="joinForm">
+      <div class="join-grid">
+        <div class="field">
+          <label for="name">Full name</label>
+          <input id="name" name="name" type="text" required placeholder="Your name">
+        </div>
+        <div class="field">
+          <label for="whatsapp">WhatsApp number</label>
+          <input id="whatsapp" name="whatsapp" type="tel" required placeholder="+27 xx xxx xxxx">
+        </div>
+        <div class="field field-full">
+          <label for="group">Which group would you like to join?</label>
+          <select id="group" name="group" required>
+            <option value="">Select a group</option>
+            <option value="SHALOM! (discussion & testimony)">SHALOM! (discussion &amp; testimony)</option>
+            <option value="Branch of Righteousness Announcements">Branch of Righteousness Announcements</option>
+            <option value="What Are the Heavens Saying Today? (daily word)">What Are the Heavens Saying Today? (daily word)</option>
+            <option value="Not sure — please advise">Not sure — please advise</option>
+          </select>
+        </div>
+        <div class="field field-full">
+          <label for="message">A short message (optional)</label>
+          <textarea id="message" name="message" rows="3" placeholder="Anything you'd like us to know"></textarea>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary">Send request</button>
+      <p class="join-note">This opens WhatsApp with your details pre-filled, so you can send the request directly to us.</p>
+      <p class="join-note">Your name and number are only used to add you to the group you request — never shared or used for anything else.</p>
+    </form>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap-narrow">
+    <div class="section-head">
+      <span class="mono">Reach out directly</span>
+      <h2>Get in touch</h2>
+      <p>For anything outside the groups above — a question, a prayer request, or a word about the ministry — send it here.</p>
+    </div>
+
+    <form class="join-panel" id="contactForm">
+      <div class="join-grid">
+        <div class="field field-full">
+          <label for="contactName">Your name</label>
+          <input id="contactName" name="name" type="text" required placeholder="Your name">
+        </div>
+        <div class="field field-full">
+          <label for="contactMessage">Your message</label>
+          <textarea id="contactMessage" name="message" rows="5" required placeholder="Share what's on your heart"></textarea>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary" id="contactSubmit">Send message</button>
+      <p class="join-note" id="contactStatus"></p>
+      <p class="join-note">Your name and message are only used to respond to you — never shared or used for anything else.</p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <div class="brand"><span class="mark">✦</span> Branch of Righteousness</div>
+    </div>
+    <p class="foot-verse">"I in them, and You in Me, that they may be made perfect in one." — John 17:23</p>
+    <div class="copyline">
+      <span>© <span id="year"></span> Branch of Righteousness</span>
+      <span>Built on Scripture, walking through Beyond the Veil</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // === EDIT THIS: replace with the actual WhatsApp contact number (international format, no + or spaces) ===
+  const CONTACT_NUMBER = "27715410000";
+
+  document.getElementById('joinForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    const name = document.getElementById('name').value.trim();
+    const whatsapp = document.getElementById('whatsapp').value.trim();
+    const group = document.getElementById('group').value;
+    const message = document.getElementById('message').value.trim();
+
+    let text = `Hello, I'd like to request to join a group.\n\nName: ${name}\nWhatsApp: ${whatsapp}\nGroup: ${group}`;
+    if(message){ text += `\nMessage: ${message}`; }
+
+    const url = `https://wa.me/${CONTACT_NUMBER}?text=${encodeURIComponent(text)}`;
+    window.open(url, '_blank');
+  });
+
+  // === Contact form -> Formspree ===
+  document.getElementById('contactForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    const btn = document.getElementById('contactSubmit');
+    const status = document.getElementById('contactStatus');
+    const name = document.getElementById('contactName').value.trim();
+    const message = document.getElementById('contactMessage').value.trim();
+
+    btn.disabled = true;
+    btn.textContent = 'Sending...';
+    status.textContent = '';
+    status.style.color = '';
+
+    fetch('https://formspree.io/f/mzdnkewq', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({ name: name, message: message })
+    })
+    .then(function(res){
+      if(res.ok){
+        status.textContent = 'Message sent. Thank you for reaching out.';
+        status.style.color = 'var(--green)';
+        document.getElementById('contactName').value = '';
+        document.getElementById('contactMessage').value = '';
+      } else {
+        status.textContent = 'Something went wrong. Please try again.';
+        status.style.color = '#8B4A3B';
+      }
+    })
+    .catch(function(){
+      status.textContent = 'Something went wrong. Please check your connection and try again.';
+      status.style.color = '#8B4A3B';
+    })
+    .finally(function(){
+      btn.disabled = false;
+      btn.textContent = 'Send message';
+    });
+  });
+
+  // === Verse of the Day (rotates once every 24 hours, NKJV) ===
+  const verses = [
+    { text: "Be still, and know that I am God.", ref: "Psalm 46:10" },
+    { text: "Abide in Me, and I in you.", ref: "John 15:4" },
+    { text: "Behold, I will bring it health and healing; I will heal them and reveal to them the abundance of peace and truth.", ref: "Jeremiah 33:6" },
+    { text: "As the deer pants for the water brooks, so pants my soul for You, O God.", ref: "Psalm 42:1" },
+    { text: "In returning and rest you shall be saved; in quietness and confidence shall be your strength.", ref: "Isaiah 30:15" },
+    { text: "Draw near to God and He will draw near to you.", ref: "James 4:8" },
+    { text: "My soul, wait silently for God alone, for my expectation is from Him.", ref: "Psalm 62:5" },
+    { text: "The Lord is near to those who have a broken heart, and saves such as have a contrite spirit.", ref: "Psalm 34:18" },
+    { text: "But those who wait on the Lord shall renew their strength; they shall mount up with wings like eagles.", ref: "Isaiah 40:31" },
+    { text: "You will keep him in perfect peace, whose mind is stayed on You, because he trusts in You.", ref: "Isaiah 26:3" },
+    { text: "I sought the Lord, and He heard me, and delivered me from all my fears.", ref: "Psalm 34:4" },
+    { text: "Delight yourself also in the Lord, and He shall give you the desires of your heart.", ref: "Psalm 37:4" },
+    { text: "For me to live is Christ, and to die is gain.", ref: "Philippians 1:21" },
+    { text: "Taste and see that the Lord is good; blessed is the man who trusts in Him.", ref: "Psalm 34:8" },
+    { text: "I will cause the Branch of Righteousness to grow up.", ref: "Jeremiah 33:15" },
+  ];
+  const dayIndex = Math.floor(Date.now() / 86400000) % verses.length;
+  const todayVerse = verses[dayIndex];
+  document.getElementById('votd-text').textContent = '"' + todayVerse.text + '"';
+  document.getElementById('votd-ref').textContent = '— ' + todayVerse.ref + ' (NKJV)';
+</script>
+
+</body>
+</html>
