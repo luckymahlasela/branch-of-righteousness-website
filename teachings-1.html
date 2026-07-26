@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Teachings &mdash; Branch of Righteousness</title>
+<meta name="description" content="A ministry rooted in Scripture, helping believers build a daily rhythm of prayer and press on toward deeper union with God through Christian mysticism and contemplative practice.">
+<meta property="og:title" content="Branch of Righteousness">
+<meta property="og:description" content="A ministry rooted in Scripture, helping believers build a daily rhythm of prayer and press on toward deeper union with God.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://branchofrighteousness.org">
+<meta property="og:site_name" content="Branch of Righteousness">
+<meta property="og:image" content="https://branchofrighteousness.org/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Branch of Righteousness">
+<meta name="twitter:description" content="A ministry rooted in Scripture, helping believers build a daily rhythm of prayer and press on toward deeper union with God.">
+<meta name="twitter:image" content="https://branchofrighteousness.org/og-image.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --stone:#F2F1EC;
+    --stone-deep:#E8E5DA;
+    --ink:#1C2331;
+    --ink-soft:#3C4456;
+    --gold:#A9812E;
+    --gold-soft:#C9A75C;
+    --green:#2F4A3C;
+    --line:#D9D4C4;
+    --white:#FFFFFF;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--stone);
+    color:var(--ink);
+    font-family:'Inter', sans-serif;
+    font-size:17px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.display{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    letter-spacing:-0.01em;
+    color:var(--ink);
+  }
+  .mono{
+    font-family:'IBM Plex Mono', monospace;
+    letter-spacing:0.04em;
+    text-transform:uppercase;
+    font-size:0.72rem;
+  }
+  a{color:inherit;}
+  img{max-width:100%; display:block;}
+  .wrap{max-width:960px; margin:0 auto; padding:0 28px;}
+  .wrap-narrow{max-width:740px; margin:0 auto; padding:0 28px;}
+
+  /* Focus visibility */
+  a:focus-visible, button:focus-visible{
+    outline:2px solid var(--gold);
+    outline-offset:3px;
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation:none !important; transition:none !important;}
+  }
+
+  /* ===== NAV ===== */
+  nav{
+    position:sticky; top:0; z-index:50;
+    background:rgba(242,241,236,0.92);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  nav .wrap{
+    display:flex; align-items:center; justify-content:space-between;
+    height:64px;
+  }
+  .brand{
+    font-family:'Fraunces', serif; font-weight:600; font-size:1.05rem;
+    display:flex; align-items:center; gap:10px;
+  }
+  .brand .mark{
+    width:26px; height:26px; border-radius:50%;
+    border:1.5px solid var(--gold);
+    display:flex; align-items:center; justify-content:center;
+    font-size:13px; color:var(--gold);
+  }
+  .navlinks{display:flex; gap:28px; font-size:0.88rem;}
+  .navlinks a{text-decoration:none; color:var(--ink-soft); transition:color 0.2s;}
+  .navlinks a:hover{color:var(--gold);}
+  @media (max-width:640px){ .navlinks{display:none;} }
+
+  /* ===== HERO ===== */
+  .hero{
+    padding:100px 0 90px;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero .wrap{position:relative; z-index:2;}
+  .eyebrow{
+    color:var(--gold); margin-bottom:22px; display:flex; align-items:center; gap:10px;
+  }
+  .eyebrow::before{
+    content:''; width:22px; height:1px; background:var(--gold);
+  }
+  .hero h1{
+    font-size:clamp(2.4rem, 5.5vw, 4.1rem);
+    line-height:1.05;
+    max-width:11ch;
+    margin-bottom:28px;
+  }
+  .hero .sub{
+    font-size:1.15rem;
+    color:var(--ink-soft);
+    max-width:46ch;
+    margin-bottom:40px;
+  }
+  .hero .ctas{display:flex; gap:16px; flex-wrap:wrap;}
+
+  .btn{
+    display:inline-flex; align-items:center; gap:8px;
+    padding:14px 26px;
+    font-family:'Inter', sans-serif; font-weight:600; font-size:0.92rem;
+    border-radius:2px;
+    text-decoration:none;
+    border:1px solid transparent;
+    cursor:pointer;
+    transition:transform 0.15s ease, background 0.2s ease, border-color 0.2s ease;
+  }
+  .btn:hover{ transform:translateY(-1px); }
+  .btn-primary{ background:var(--ink); color:var(--stone); }
+  .btn-primary:hover{ background:var(--green); }
+  .btn-ghost{ border-color:var(--ink); color:var(--ink); }
+  .btn-ghost:hover{ border-color:var(--gold); color:var(--gold); }
+
+  /* Seal graphic in hero */
+  .seal{
+    position:absolute;
+    right:-60px; top:40px;
+    width:340px; height:340px;
+    border-radius:50%;
+    border:1px solid var(--line);
+    opacity:0.6;
+    z-index:1;
+  }
+  .seal::before{
+    content:'';
+    position:absolute; inset:26px;
+    border-radius:50%;
+    border:1px solid var(--gold-soft);
+  }
+  @media (max-width:900px){ .seal{ display:none; } }
+
+  /* ===== SECTION shared ===== */
+  section{ padding:86px 0; border-top:1px solid var(--line); }
+  .section-head{ margin-bottom:52px; max-width:60ch; }
+  .section-head .mono{ color:var(--gold); margin-bottom:14px; display:block; }
+  .section-head h2{ font-size:clamp(1.7rem, 3.4vw, 2.3rem); margin-bottom:16px; }
+  .section-head p{ color:var(--ink-soft); font-size:1.02rem; }
+
+  /* ===== MANDATE quote ===== */
+  .mandate{
+    background:var(--ink);
+    color:var(--stone);
+    border-top:none;
+  }
+  .mandate blockquote{
+    font-family:'Fraunces', serif;
+    font-weight:400;
+    font-style:italic;
+    font-size:clamp(1.3rem, 2.6vw, 1.75rem);
+    line-height:1.5;
+    max-width:34ch;
+  }
+  .mandate .attrib{
+    margin-top:28px; color:var(--gold-soft);
+  }
+
+  /* ===== FOUNDATIONS (linear build, since it's a real progression) ===== */
+  .stones{
+    display:flex; flex-direction:column-reverse;
+    gap:2px;
+    max-width:640px;
+  }
+  .stone-row{
+    display:grid;
+    grid-template-columns:56px 1fr;
+    align-items:center;
+    gap:20px;
+    background:var(--white);
+    border:1px solid var(--line);
+    padding:18px 22px;
+  }
+  .stone-num{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:1.1rem;
+    color:var(--gold);
+    text-align:center;
+  }
+  .stone-row h3{
+    font-size:1.02rem; font-weight:600; margin-bottom:3px;
+  }
+  .stone-row p{ color:var(--ink-soft); font-size:0.92rem; }
+  .stones-note{
+    margin-top:22px; font-size:0.9rem; color:var(--ink-soft); max-width:52ch;
+    padding-left:2px;
+  }
+  .stones-note strong{ color:var(--ink); }
+
+  /* ===== ABOUT ===== */
+  .about-body{ max-width:64ch; }
+  .about-body p{ color:var(--ink-soft); font-size:1.02rem; margin-bottom:18px; }
+  .about-body p:first-child{ color:var(--ink); font-size:1.08rem; }
+
+  /* book blurb split */
+  .book-split{
+    display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:start;
+  }
+  @media (max-width:760px){ .book-split{ grid-template-columns:1fr; } }
+  .book-cover{
+    aspect-ratio:3/4.2;
+    background:linear-gradient(160deg, var(--ink) 0%, #262f42 60%, var(--green) 100%);
+    border-radius:2px;
+    display:flex; flex-direction:column; justify-content:center; align-items:center;
+    text-align:center; padding:40px;
+    color:var(--stone);
+  }
+  .book-cover .mono{ color:var(--gold-soft); margin-bottom:18px; }
+  .book-cover h3{ font-size:1.5rem; color:var(--stone); line-height:1.25; margin-bottom:14px; }
+  .book-cover .author{ color:var(--gold-soft); font-size:0.85rem; letter-spacing:0.05em; }
+  .book-copy p{ margin-bottom:18px; color:var(--ink-soft); }
+  .book-copy p:first-child{ color:var(--ink); font-size:1.05rem; }
+  .book-ctas{ display:flex; gap:14px; flex-wrap:wrap; margin-top:8px; }
+
+  /* ===== RHYTHM cards ===== */
+  .rhythm-grid{
+    display:grid; grid-template-columns:1fr 1fr; gap:2px;
+    background:var(--line);
+    border:1px solid var(--line);
+  }
+  @media (max-width:640px){ .rhythm-grid{ grid-template-columns:1fr; } }
+  .rhythm-card{ background:var(--white); padding:32px; }
+  .rhythm-card .mono{ color:var(--gold); margin-bottom:14px; display:block; }
+  .rhythm-card h3{ font-size:1.3rem; margin-bottom:10px; }
+  .rhythm-card p{ color:var(--ink-soft); font-size:0.95rem; }
+
+  /* ===== CYCLE wheel (circular, since it repeats) ===== */
+  .cycle-wrap{
+    display:grid; grid-template-columns:280px 1fr; gap:56px; align-items:center;
+  }
+  @media (max-width:760px){ .cycle-wrap{ grid-template-columns:1fr; } }
+  .wheel{
+    position:relative; width:260px; height:260px; margin:0 auto;
+  }
+  .wheel-ring{
+    position:absolute; inset:0; border-radius:50%;
+    border:1px dashed var(--line);
+  }
+  .wheel-center{
+    position:absolute; inset:76px; border-radius:50%;
+    background:var(--ink); color:var(--stone);
+    display:flex; align-items:center; justify-content:center;
+    text-align:center; font-family:'Fraunces', serif; font-size:0.95rem; font-weight:600;
+    line-height:1.2; padding:10px;
+  }
+  .wheel-node{
+    position:absolute; width:64px; height:64px; margin:-32px;
+    border-radius:50%; background:var(--white); border:1px solid var(--line);
+    display:flex; align-items:center; justify-content:center;
+    text-align:center; font-size:0.62rem; font-weight:600; color:var(--ink-soft);
+    padding:6px; line-height:1.15;
+  }
+  .cycle-list{ display:flex; flex-direction:column; gap:0; }
+  .cycle-item{
+    display:flex; gap:16px; padding:14px 0;
+    border-bottom:1px solid var(--line);
+  }
+  .cycle-item:first-child{ border-top:1px solid var(--line); }
+  .cycle-item .mono{ color:var(--gold); min-width:26px; }
+  .cycle-item span.name{ font-weight:600; }
+  .cycle-item span.desc{ color:var(--ink-soft); font-size:0.9rem; display:block; }
+
+  /* ===== MONTHLY TEACHING ===== */
+  .teaching-featured{
+    background:var(--white); border:1px solid var(--line);
+    padding:44px; margin-bottom:48px;
+    display:grid; grid-template-columns:180px 1fr; gap:40px; align-items:start;
+  }
+  @media (max-width:700px){ .teaching-featured{ grid-template-columns:1fr; padding:30px 26px; } }
+  .teaching-when{
+    display:flex; flex-direction:column; gap:6px;
+  }
+  .teaching-when .month{
+    font-family:'Fraunces', serif; font-weight:600; font-size:1.4rem; line-height:1.1;
+  }
+  .teaching-when .mono{ color:var(--gold); }
+  .teaching-body h3{ font-size:1.5rem; margin-bottom:14px; }
+  .teaching-body p{ color:var(--ink-soft); margin-bottom:18px; }
+  .teaching-body p:last-of-type{ margin-bottom:26px; }
+
+  .teaching-archive-head{
+    font-size:0.82rem; font-weight:600; color:var(--ink-soft);
+    text-transform:uppercase; letter-spacing:0.04em;
+    margin-bottom:2px; padding-bottom:14px;
+  }
+  .teaching-archive{ display:flex; flex-direction:column; }
+  .teaching-item{
+    display:flex; gap:20px; align-items:baseline;
+    padding:18px 0; border-bottom:1px solid var(--line);
+  }
+  .teaching-item:first-child{ border-top:1px solid var(--line); }
+  .teaching-item .mono{ color:var(--gold); min-width:100px; }
+  .teaching-item .name{ font-weight:600; flex:1; }
+  .teaching-item .theme{ color:var(--ink-soft); font-size:0.88rem; }
+  @media (max-width:640px){
+    .teaching-item{ flex-wrap:wrap; }
+    .teaching-item .mono{ min-width:auto; }
+  }
+
+  /* ===== GROUPS ===== */
+  .groups-grid{
+    display:grid; grid-template-columns:repeat(3, 1fr); gap:2px;
+    background:var(--line); border:1px solid var(--line);
+  }
+  @media (max-width:860px){ .groups-grid{ grid-template-columns:1fr; } }
+  .group-card{
+    background:var(--white); padding:34px 30px;
+    display:flex; flex-direction:column; height:100%;
+  }
+  .group-icon{
+    width:44px; height:44px; border-radius:50%;
+    display:flex; align-items:center; justify-content:center;
+    margin-bottom:22px; font-size:1.1rem;
+    border:1px solid var(--line);
+  }
+  .group-card h3{ font-size:1.15rem; margin-bottom:8px; }
+  .group-card .tag{
+    color:var(--gold); margin-bottom:14px; display:block;
+  }
+  .group-card p{ color:var(--ink-soft); font-size:0.92rem; flex-grow:1; margin-bottom:22px; }
+  .group-card .btn{ align-self:flex-start; }
+
+  /* ===== JOIN FORM ===== */
+  .join-panel{
+    background:var(--white); border:1px solid var(--line);
+    padding:44px;
+  }
+  @media (max-width:640px){ .join-panel{ padding:30px 24px; } }
+  .join-grid{ display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-bottom:22px; }
+  @media (max-width:640px){ .join-grid{ grid-template-columns:1fr; } }
+  .field{ display:flex; flex-direction:column; gap:8px; }
+  .field label{ font-size:0.82rem; font-weight:600; color:var(--ink-soft); }
+  .field input, .field select, .field textarea{
+    font-family:'Inter', sans-serif; font-size:0.95rem;
+    padding:12px 14px; border:1px solid var(--line); border-radius:2px;
+    background:var(--stone); color:var(--ink);
+  }
+  .field input:focus, .field select:focus, .field textarea:focus{
+    outline:none; border-color:var(--gold);
+  }
+  .field-full{ grid-column:1/-1; }
+  .join-note{ font-size:0.85rem; color:var(--ink-soft); margin-top:16px; }
+
+  /* ===== FOOTER ===== */
+  footer{
+    background:var(--ink); color:var(--stone);
+    padding:56px 0 36px;
+  }
+  footer .wrap{
+    display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:24px;
+  }
+  footer .brand{ color:var(--stone); }
+  footer .brand .mark{ border-color:var(--gold-soft); color:var(--gold-soft); }
+  footer .foot-verse{
+    font-family:'Fraunces', serif; font-style:italic; color:#9AA3B5; max-width:36ch; font-size:0.95rem;
+  }
+  footer .copyline{
+    width:100%; margin-top:36px; padding-top:24px; border-top:1px solid #333c50;
+    font-size:0.78rem; color:#7B8398;
+    display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px;
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="brand"><span class="mark">✦</span> Branch of Righteousness</div>
+    <div class="navlinks">
+      <a href="index.html#mandate">Mandate</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#book">The Journey</a>
+      <a href="index.html#rhythm">Rhythm</a>
+      <a href="index.html#teaching">Teaching</a>
+      <a href="teachings.html">Library</a>
+      <a href="index.html#groups">Groups</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" style="min-height:auto; padding:80px 0 50px;">
+  <div class="seal" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="eyebrow mono">Written teachings</div>
+    <h1 style="font-size:clamp(2.2rem, 5vw, 3.4rem);">The Teachings Library</h1>
+    <p class="sub">Full written teachings from our gatherings, gathered here so they can be read slowly, returned to, and shared &mdash; not lost in the scroll of a chat.</p>
+  </div>
+</header>
+
+<section id="library">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="mono">Available now</span>
+      <h2>Read at your own pace</h2>
+      <p>Each teaching is available as a PDF &mdash; download it, print it, or read it on your phone.</p>
+    </div>
+
+    <div class="teaching-archive" style="display:flex; flex-direction:column; gap:0;">
+
+      <div class="teaching-item" style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px; padding:24px 0; border-bottom:1px solid var(--line);">
+        <div style="max-width:60ch;">
+          <span class="mono" style="color:var(--gold); font-size:0.78rem;">Romans 4 &middot; Genesis 17</span>
+          <h3 style="margin:6px 0 8px; font-family:'Fraunces',serif; font-size:1.3rem; color:var(--ink);">The Faith of Our Father Abraham</h3>
+          <p style="color:var(--ink-soft); font-size:0.95rem; margin:0;">On the faith that trusts God beyond what can be seen &mdash; how Abraham believed the God who gives life to the dead, and why righteousness always comes before the sign.</p>
+        </div>
+        <a href="the-faith-of-our-father-abraham.pdf" class="btn btn-primary" download>Download PDF</a>
+      </div>
+
+      <div class="teaching-item" style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px; padding:24px 0; border-bottom:1px solid var(--line);">
+        <div style="max-width:60ch;">
+          <span class="mono" style="color:var(--gold); font-size:0.78rem;">Romans 6 &middot; Exodus 14 &middot; 1 Corinthians 10</span>
+          <h3 style="margin:6px 0 8px; font-family:'Fraunces',serif; font-size:1.3rem; color:var(--ink);">Dead to Egypt, Alive to God</h3>
+          <p style="color:var(--ink-soft); font-size:0.95rem; margin:0;">What it means to be baptized into Christ's death &mdash; traced through Israel's crossing of the Red Sea, where an old life drowned behind them and a new one rose on the far shore.</p>
+        </div>
+        <a href="dead-to-egypt-alive-to-God.pdf" class="btn btn-primary" download>Download PDF</a>
+      </div>
+
+    </div>
+
+    <p style="margin-top:32px; color:var(--ink-soft); font-size:0.92rem;">More teachings will be added here as they are transcribed. Check back often.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <div class="brand"><span class="mark">✦</span> Branch of Righteousness</div>
+    </div>
+    <p class="foot-verse">"I in them, and You in Me, that they may be made perfect in one." — John 17:23</p>
+    <div class="copyline">
+      <span>© <span id="year"></span> Branch of Righteousness</span>
+      <span>Built on Scripture, walking through Beyond the Veil</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
