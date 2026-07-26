@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Teachings &mdash; Branch of Righteousness</title>
+<meta name="description" content="A ministry rooted in Scripture, helping believers build a daily rhythm of prayer and press on toward deeper union with God through Christian mysticism and contemplative practice.">
+<meta property="og:title" content="Branch of Righteousness">
+<meta property="og:description" content="A ministry rooted in Scripture, helping believers build a daily rhythm of prayer and press on toward deeper union with God.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://branchofrighteousness.org">
+<meta property="og:site_name" content="Branch of Righteousness">
+<meta property="og:image" content="https://branchofrighteousness.org/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Branch of Righteousness">
+<meta name="twitter:description" content="A ministry rooted in Scripture, helping believers build a daily rhythm of prayer and press on toward deeper union with God.">
+<meta name="twitter:image" content="https://branchofrighteousness.org/og-image.jpg">
+<style>
+  :root {
+    --parchment: #f7f2e9;
+    --parchment-dim: #efe8d8;
+    --ink: #2b2620;
+    --ink-soft: #57503f;
+    --gold: #a3782f;
+    --gold-deep: #7c5a20;
+    --rule: #d9cfb6;
+    --serif: Georgia, 'Iowan Old Style', 'Palatino Linotype', 'Book Antiqua', serif;
+    --sans: 'Helvetica Neue', Arial, sans-serif;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--parchment);
+    color: var(--ink);
+    font-family: var(--serif);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: var(--gold-deep); text-decoration: none; }
+  a:hover, a:focus-visible { text-decoration: underline; }
+  a:focus-visible { outline: 2px solid var(--gold-deep); outline-offset: 3px; }
+
+  header.site {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem 1.5rem;
+    border-bottom: 1px solid var(--rule);
+    font-family: var(--sans);
+  }
+
+  .brand {
+    font-size: 0.95rem;
+    letter-spacing: 0.04em;
+    color: var(--ink);
+    font-weight: 600;
+  }
+
+  nav.site-nav { display: none; }
+
+  @media (min-width: 780px) {
+    nav.site-nav {
+      display: flex;
+      gap: 1.75rem;
+      font-size: 0.85rem;
+      letter-spacing: 0.02em;
+    }
+    nav.site-nav a { color: var(--ink-soft); }
+  }
+
+  main {
+    max-width: 46rem;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 5rem;
+  }
+
+  .eyebrow {
+    font-family: var(--sans);
+    text-transform: uppercase;
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    color: var(--gold-deep);
+    margin-bottom: 0.9rem;
+  }
+
+  h1 {
+    font-size: clamp(2rem, 5vw, 2.7rem);
+    line-height: 1.15;
+    margin: 0 0 0.8rem;
+    color: var(--ink);
+  }
+
+  .intro {
+    font-size: 1.05rem;
+    color: var(--ink-soft);
+    max-width: 38rem;
+    margin: 0 0 3rem;
+  }
+
+  .section-label {
+    font-family: var(--sans);
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--gold);
+    margin: 0 0 0.5rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    margin: 0 0 0.5rem;
+  }
+
+  .section-desc {
+    font-family: var(--sans);
+    font-size: 0.92rem;
+    color: var(--ink-soft);
+    margin: 0 0 2rem;
+  }
+
+  .teaching-card {
+    border: 1px solid var(--rule);
+    background: var(--parchment-dim);
+    border-radius: 6px;
+    padding: 1.6rem 1.75rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .teaching-refs {
+    font-family: var(--sans);
+    font-size: 0.78rem;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--gold-deep);
+    margin-bottom: 0.5rem;
+  }
+
+  .teaching-card h3 {
+    font-size: 1.25rem;
+    margin: 0 0 0.6rem;
+    color: var(--ink);
+  }
+
+  .teaching-card p {
+    font-size: 1rem;
+    color: var(--ink-soft);
+    margin: 0 0 1rem;
+  }
+
+  .teaching-card a.action {
+    font-family: var(--sans);
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--gold-deep);
+  }
+
+  .teaching-card a.action::after {
+    content: " \2192";
+  }
+
+  .note {
+    font-family: var(--sans);
+    font-size: 0.88rem;
+    color: var(--ink-soft);
+    font-style: italic;
+    margin-top: 2rem;
+  }
+
+  footer.site {
+    text-align: center;
+    padding: 2.5rem 1.5rem 3rem;
+    font-family: var(--sans);
+    font-size: 0.82rem;
+    color: var(--ink-soft);
+    border-top: 1px solid var(--rule);
+  }
+
+  footer.site .mark {
+    letter-spacing: 0.06em;
+    margin-bottom: 0.5rem;
+    color: var(--ink);
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <span class="brand">&#10022; Branch of Righteousness</span>
+  <nav class="site-nav">
+    <a href="index.html#mandate">Mandate</a>
+    <a href="index.html#about">About</a>
+    <a href="index.html#book">The Journey</a>
+    <a href="index.html#rhythm">Rhythm</a>
+    <a href="index.html#teaching">Teaching</a>
+    <a href="teachings.html">Library</a>
+    <a href="index.html#groups">Groups</a>
+    <a href="index.html#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <p class="eyebrow">Written teachings</p>
+  <h1>The Teachings Library</h1>
+  <p class="intro">Full written teachings from our gatherings, gathered here so they can be read slowly, returned to, and shared &mdash; not lost in the scroll of a chat.</p>
+
+  <p class="section-label">Available now</p>
+  <h2>Read at your own pace</h2>
+  <p class="section-desc">Each teaching is available as a PDF &mdash; download it, print it, or read it on your phone.</p>
+
+  <div class="teaching-card">
+    <p class="teaching-refs">Ezekiel 39 &middot; 43 &middot; 44 &middot; 46 &middot; Acts 1 &middot; 2 Corinthians 8</p>
+    <h3>True Repentance: The Gate to Glory</h3>
+    <p>A two-part teaching on repentance from Ezekiel's temple vision &mdash; the heart as the true dwelling place of God, and the willing heart that opens what the law alone could never open.</p>
+    <a class="action" href="https://www.branchofrighteousness.org/true-repentance.pdf">Download PDF</a>
+  </div>
+
+  <div class="teaching-card">
+    <p class="teaching-refs">Romans 4 &middot; Genesis 17</p>
+    <h3>The Faith of Our Father Abraham</h3>
+    <p>On the faith that trusts God beyond what can be seen &mdash; how Abraham believed the God who gives life to the dead, and why righteousness always comes before the sign.</p>
+    <a class="action" href="https://www.branchofrighteousness.org/the-faith-of-our-father-abraham.pdf">Download PDF</a>
+  </div>
+
+  <div class="teaching-card">
+    <p class="teaching-refs">Romans 6 &middot; Exodus 14 &middot; 1 Corinthians 10</p>
+    <h3>Dead to Egypt, Alive to God</h3>
+    <p>What it means to be baptized into Christ's death &mdash; traced through Israel's crossing of the Red Sea, where an old life drowned behind them and a new one rose on the far shore.</p>
+    <a class="action" href="https://www.branchofrighteousness.org/dead-to-egypt-alive-to-God.pdf">Download PDF</a>
+  </div>
+
+  <p class="note">More teachings will be added here as they are transcribed. Check back often.</p>
+</main>
+
+<footer class="site">
+  <div class="mark">&#10022; Branch of Righteousness</div>
+  <p>&ldquo;I in them, and You in Me, that they may be made perfect in one.&rdquo; &mdash; John 17:23</p>
+  <p>&copy; Branch of Righteousness &middot; Built on Scripture, walking through Beyond the Veil</p>
+</footer>
+
+</body>
+  </html>
