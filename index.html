@@ -95,6 +95,43 @@
   .navlinks a:hover{color:var(--gold);}
   @media (max-width:640px){ .navlinks{display:none;} }
 
+  /* ===== MOBILE NAV TOGGLE ===== */
+  .nav-toggle{
+    display:none;
+    background:none; border:none; cursor:pointer;
+    width:40px; height:40px; padding:8px;
+    align-items:center; justify-content:center;
+  }
+  .nav-toggle span{
+    display:block; width:100%; height:2px; background:var(--ink);
+    position:relative; transition:background 0.2s ease;
+  }
+  .nav-toggle span::before, .nav-toggle span::after{
+    content:''; position:absolute; left:0; width:100%; height:2px;
+    background:var(--ink); transition:transform 0.2s ease, top 0.2s ease;
+  }
+  .nav-toggle span::before{ top:-8px; }
+  .nav-toggle span::after{ top:8px; }
+  .nav-toggle[aria-expanded="true"] span{ background:transparent; }
+  .nav-toggle[aria-expanded="true"] span::before{ top:0; transform:rotate(45deg); }
+  .nav-toggle[aria-expanded="true"] span::after{ top:0; transform:rotate(-45deg); }
+  @media (max-width:640px){ .nav-toggle{ display:flex; } }
+
+  .mobile-menu{
+    display:none;
+    flex-direction:column;
+    background:var(--parchment, #F2F1EC);
+    border-bottom:1px solid var(--line);
+  }
+  .mobile-menu.open{ display:flex; }
+  .mobile-menu a{
+    text-decoration:none; color:var(--ink-soft);
+    padding:14px 28px; font-size:0.95rem;
+    border-top:1px solid var(--line);
+  }
+  .mobile-menu a:hover, .mobile-menu a:active{ color:var(--gold); }
+  @media (min-width:641px){ .mobile-menu{ display:none !important; } }
+
   /* ===== HERO ===== */
   .hero{
     padding:100px 0 90px;
@@ -317,9 +354,10 @@
   .teaching-item .mono{ color:var(--gold); min-width:100px; }
   .teaching-item .name{ font-weight:600; flex:1; }
   .teaching-item .theme{ color:var(--ink-soft); font-size:0.88rem; }
-  a.teaching-item{ text-decoration:none; transition:background 0.15s ease; }
-  a.teaching-item:hover{ background:var(--stone-deep); }
-  a.teaching-item:hover .name{ color:var(--gold); }
+  a.teaching-item-link{ text-decoration:none; transition:background 0.15s ease; }
+  a.teaching-item-link:hover{ background:var(--stone-deep); }
+  a.teaching-item-link .name{ transition:color 0.15s ease; }
+  a.teaching-item-link:hover .name{ color:var(--gold); }
   @media (max-width:640px){
     .teaching-item{ flex-wrap:wrap; }
     .teaching-item .mono{ min-width:auto; }
@@ -405,6 +443,20 @@
       <a href="#join">Join</a>
       <a href="#contact">Contact</a>
     </div>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu">
+      <span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#mandate">Mandate</a>
+    <a href="#about">About</a>
+    <a href="#book">The Journey</a>
+    <a href="#rhythm">Rhythm</a>
+    <a href="#teaching">Teaching</a>
+    <a href="teachings.html">Library</a>
+    <a href="#groups">Groups</a>
+    <a href="#join">Join</a>
+    <a href="#contact">Contact</a>
   </div>
 </nav>
 
@@ -555,9 +607,9 @@
 
     <div class="teaching-archive-head" style="margin-top:48px;">From the library</div>
     <div class="teaching-archive">
-      <a href="order-of-function-in-marriage.pdf" class="teaching-item"><span class="mono">PDF</span><span class="name">The Order of Function in Marriage</span><span class="theme">Ephesians 5</span></a>
-      <a href="value.pdf" class="teaching-item"><span class="mono">PDF</span><span class="name">Value: The Relationship Made by the Spirit</span><span class="theme">Acts 9&ndash;15</span></a>
-      <a href="spirit-of-unsatisfaction.pdf" class="teaching-item"><span class="mono">PDF</span><span class="name">The Spirit of Unsatisfaction</span><span class="theme">Ezekiel 16 &middot; 28</span></a>
+      <a href="order-of-function-in-marriage.pdf" class="teaching-item teaching-item-link"><span class="mono">PDF</span><span class="name">The Order of Function in Marriage</span><span class="theme">Ephesians 5</span></a>
+      <a href="value.pdf" class="teaching-item teaching-item-link"><span class="mono">PDF</span><span class="name">Value: The Relationship Made by the Spirit</span><span class="theme">Acts 9&ndash;15</span></a>
+      <a href="spirit-of-unsatisfaction.pdf" class="teaching-item teaching-item-link"><span class="mono">PDF</span><span class="name">The Spirit of Unsatisfaction</span><span class="theme">Ezekiel 16 &middot; 28</span></a>
     </div>
     <div style="margin-top:26px;">
       <a href="teachings.html" class="btn btn-ghost">View all teachings &rarr;</a>
@@ -713,6 +765,20 @@
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
 
+  // === Mobile nav toggle ===
+  const navToggle = document.getElementById('navToggle');
+  const mobileMenu = document.getElementById('mobileMenu');
+  navToggle.addEventListener('click', function(){
+    const isOpen = mobileMenu.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+  mobileMenu.querySelectorAll('a').forEach(function(link){
+    link.addEventListener('click', function(){
+      mobileMenu.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+
   // === EDIT THIS: replace with the actual WhatsApp contact number (international format, no + or spaces) ===
   const CONTACT_NUMBER = "27715410000";
 
@@ -794,4 +860,4 @@
 </script>
 
 </body>
-  </html>
+</html>
