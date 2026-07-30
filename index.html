@@ -406,6 +406,26 @@
   }
   .field-full{ grid-column:1/-1; }
   .join-note{ font-size:0.85rem; color:var(--ink-soft); margin-top:16px; }
+  
+  /* ===== GIVE ===== */
+  .give-grid{
+    display:grid; grid-template-columns:1fr 1fr; gap:2px;
+    background:var(--line); border:1px solid var(--line);
+  }
+  @media (max-width:640px){ .give-grid{ grid-template-columns:1fr; } }
+  .give-card{ background:var(--white); padding:34px 32px; }
+  .give-card h3{ font-size:1.25rem; margin-bottom:16px; }
+  .give-details{ display:flex; flex-direction:column; gap:10px; margin-top:6px; }
+  .give-row{
+    display:flex; justify-content:space-between; gap:14px;
+    font-size:0.9rem; border-bottom:1px solid var(--line); padding-bottom:9px;
+  }
+  .give-row:last-child{ border-bottom:none; padding-bottom:0; }
+  .give-row .label{ color:var(--ink-soft); }
+  .give-row .value{
+    font-family:'IBM Plex Mono', monospace; font-size:0.82rem;
+    text-align:right; color:var(--ink);
+  }
 
   /* ===== FOOTER ===== */
   footer{
@@ -440,6 +460,7 @@
       <a href="#teaching">Teaching</a>
       <a href="teachings.html">Library</a>
       <a href="#groups">Groups</a>
+      <a href="#give">Give</a>
       <a href="#join">Join</a>
       <a href="#contact">Contact</a>
     </div>
@@ -455,6 +476,7 @@
     <a href="#teaching">Teaching</a>
     <a href="teachings.html">Library</a>
     <a href="#groups">Groups</a>
+    <a href="#give">Give</a>
     <a href="#join">Join</a>
     <a href="#contact">Contact</a>
   </div>
@@ -682,6 +704,38 @@
     </div>
   </div>
 </section>
+  
+  
+  <section id="give">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="mono">Support the ministry</span>
+      <h2>Sow into the work</h2>
+      <p>Beyond the Veil, the weekly teachings, and this ministry's ongoing work are sustained by the generosity of people like you. If you'd like to give, here's how.</p>
+    </div>
+    <div class="give-grid">
+      <div class="give-card">
+        <h3>Bank transfer (EFT)</h3>
+        <div class="give-details">
+          <div class="give-row"><span class="label">Bank</span><span class="value">Discovery Bank</span></div>
+          <div class="give-row"><span class="label">Account name</span><span class="value">Discovery Transaction Account</span></div>
+          <div class="give-row"><span class="label">Account number</span><span class="value">10861652950</span></div>
+          <div class="give-row"><span class="label">Branch code</span><span class="value">679000</span></div>
+          <div class="give-row"><span class="label">SWIFT code</span><span class="value">DISCZAJJXXX</span></div>
+          <div class="give-row"><span class="label">Country</span><span class="value">South Africa</span></div>
+        </div>
+        <p class="join-note" style="margin-top:18px;">The SWIFT code is only needed for international transfers.</p>
+      </div>
+      <div class="give-card">
+        <h3>PayPal</h3>
+        <p style="color:var(--ink-soft); font-size:0.95rem; margin-bottom:22px;">For giving from outside South Africa, or if PayPal is simply easier for you.</p>
+        <a href="https://paypal.me/LuckyMahlasela" class="btn btn-primary" target="_blank" rel="noopener">Give via PayPal</a>
+        <p class="join-note" style="margin-top:20px;">This link goes directly to Lucky Mahlasela's PayPal, used to support Branch of Righteousness ministry work.</p>
+      </div>
+    </div>
+    <p class="join-note" style="margin-top:26px;">Every gift, of any size, is received with gratitude and used directly for this ministry's work. Thank you for sowing with us.</p>
+  </div>
+  </section>
 
 <section id="join">
   <div class="wrap-narrow">
