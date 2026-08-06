@@ -85,11 +85,11 @@
     display:flex; align-items:center; gap:10px;
   }
   .brand .mark{
-    width:26px; height:26px; border-radius:50%;
-    border:1.5px solid var(--gold);
-    display:flex; align-items:center; justify-content:center;
-    font-size:13px; color:var(--gold);
-  }
+  width:30px; height:36px;
+  display:flex; align-items:center; justify-content:center;
+  color:var(--gold);
+}
+.brand .mark svg{ width:100%; height:100%; }
   .navlinks{display:flex; gap:28px; font-size:0.88rem;}
   .navlinks a{text-decoration:none; color:var(--ink-soft); transition:color 0.2s;}
   .navlinks a:hover{color:var(--gold);}
@@ -451,7 +451,7 @@
 
 <nav>
   <div class="wrap">
-    <div class="brand"><span class="mark">✦</span> Branch of Righteousness</div>
+    <div class="brand"><span class="mark" aria-hidden="true"><svg viewBox="150 90 300 400" xmlns="http://www.w3.org/2000/svg"><g stroke-linecap="round" fill="none" stroke="currentColor"><path d="M300,420 C288,438 268,448 246,452"/><path d="M300,420 C300,440 300,452 300,462"/><path d="M300,420 C312,438 332,448 354,452"/><path d="M300,420 C297,360 303,240 300,168" stroke-width="15"/><path d="M300,308 C282,292 268,270 254,214" stroke-width="10"/><path d="M300,308 C318,292 332,270 346,214" stroke-width="10"/><path d="M300,352 C266,332 240,306 224,244" stroke-width="11"/><path d="M300,352 C334,332 360,306 376,244" stroke-width="11"/><path d="M300,392 C248,368 210,332 198,274" stroke-width="12"/><path d="M300,392 C352,368 390,332 402,274" stroke-width="12"/></g><g fill="currentColor"><path d="M0,-4 C7,-27 -1,-36 -3,-47 C-9,-33 -5,-19 0,-4 Z" transform="translate(198,274) scale(-0.92,0.92)"/><path d="M0,-4 C7,-27 -1,-36 -3,-47 C-9,-33 -5,-19 0,-4 Z" transform="translate(402,274) scale(0.92)"/><path d="M0,-4 C7,-27 -1,-36 -3,-47 C-9,-33 -5,-19 0,-4 Z" transform="translate(224,244) scale(-0.98,0.98)"/><path d="M0,-4 C7,-27 -1,-36 -3,-47 C-9,-33 -5,-19 0,-4 Z" transform="translate(376,244) scale(0.98)"/><path d="M0,-4 C7,-27 -1,-36 -3,-47 C-9,-33 -5,-19 0,-4 Z" transform="translate(254,214) scale(-1.02,1.02)"/><path d="M0,-4 C7,-27 -1,-36 -3,-47 C-9,-33 -5,-19 0,-4 Z" transform="translate(346,214) scale(1.02)"/><path d="M0,-6 C11,-24 15,-40 0,-58 C-15,-40 -11,-24 0,-6 Z" transform="translate(300,168) scale(1.18)"/></g></svg></span> Branch of Righteousness</div>
     <div class="navlinks">
       <a href="#mandate">Mandate</a>
       <a href="#about">About</a>
